@@ -17,7 +17,7 @@ If you find this code useful for your research, please cite our paper:
 @inproceedings{kargasAAAI2021,
   title={{STELAR}: Spatio-temporal Tensor Factorization with Latent Epidemiological Regularization},
   author={Kargas, Nikos and Qian, Cheng and Sidiropoulos, Nicholas D and Xiao, Cao and Glass, Lucas M and Sun, Jimeng},
-  journal={AAAI},
+  booktitle={AAAI},
   year={2021}
 }
 ```
