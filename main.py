@@ -3,15 +3,19 @@ import numpy as np
 import itertools
 from model import STELAR
 from utils import rmse, mae
+import pandas as pd
 
 np.random.seed(0)
 
 start_date = "2020-04-01"
 end_date = "2020-07-10"
 
-df, _ = covid19("USA", verbose=False, raw=False, level=2, start=start_date, end=end_date)
-df = df[['administrative_area_level_2', 'date', 'confirmed', 'deaths', 'tests', 'hosp']]
+# df, _ = covid19("USA", verbose=False, raw=False, level=2, start=start_date, end=end_date)
+# df = df[['administrative_area_level_2', 'date', 'confirmed', 'deaths', 'tests', 'hosp']]
+# states = df['administrative_area_level_2'].unique()
 
+# Snapshot of data (January 2021)
+df = pd.read_csv('./data_jan_2021.csv')
 states = df['administrative_area_level_2'].unique()
 
 # Create the tensor
